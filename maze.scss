@@ -13,7 +13,7 @@ body {
     position: fixed;
     padding: 0;
     margin: 0;
-    top: 0;
+    top: 100px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -22,44 +22,13 @@ body {
 
 
 .btn {
-    background-color: #23D5AB;
-    border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 470px;
-    color: #ffffff;
-    display: inline-block;
+    color: red;
     font-size: 40px;
-    font-weight: bold;
-    padding: 100px 100px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-
-    position: absolute;
-    top: 1750px;
-    left: 300px;
-    font-family: Days One;
+    position: relative;
+    left: 430px;
+    bottom: 40px;
 }
-
-.btn--gradient {
-    animation: gradient 3s ease infinite;
-    background-image: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-    background-size: 1000% 400%;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-
-}
+   
     #mazeContainer {
         transition-property: opacity;
         transition-duration: 1s;
@@ -127,7 +96,7 @@ body {
         font-size: 50;
         font-family: Damion;
         position: relative;
-        top: 350px;
+        top: 250px;
 
         left: 300px;
         margin: -20px;
