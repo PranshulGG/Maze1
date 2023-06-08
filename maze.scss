@@ -34,7 +34,7 @@ body {
     display: inline-block;
 
     position: absolute;
-    top: 1450px;
+    top: 1750px;
     left: 300px;
     font-family: Days One;
 }
@@ -68,6 +68,8 @@ body {
         display: inline-block;
         background-color: rgba(0, 0, 0, 0.30);
         margin: auto;
+        position: relative;
+        top: 70px;
 
     }
     #mazeCanvas {
@@ -96,6 +98,7 @@ body {
         font-family: 'Cherry Bomb One';
         position: relative;
         right: 50px;
+        margin: 70px auto;
 
         &:hover {
             background-color: rgba(0, 0, 0, 0.70);
@@ -103,8 +106,7 @@ body {
 
         &:active {
             background-color: black;
-            position: relative;
-            top: 60px;
+            
         }
 
         &:focus {
@@ -122,7 +124,7 @@ body {
         font-size: 50;
         font-family: Damion;
         position: relative;
-        top: 250px;
+        top: 330px;
 
         left: 300px;
         margin: -20px;
