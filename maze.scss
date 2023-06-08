@@ -17,6 +17,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
+    overflow: hidden;
 }
 
 
@@ -78,8 +79,8 @@ body {
         border: solid 1px black;
     }
 
-    input,
-    select {
+    input,select
+     {
         @include transition;
         cursor: auto;
         background-color: rgba(0, 0, 0, 0.30);
@@ -99,7 +100,7 @@ body {
         font-family: 'Cherry Bomb One';
         position: sticky;
         right: 50px;
-        margin-top: -70px;
+        margin-top: 100px auto;
         
 
         &:hover {
@@ -135,7 +136,7 @@ body {
         width: 400px;
         height: 60px;
     }
-
+    
 
 
 
@@ -209,7 +210,7 @@ body {
         #menu {
             margin: auto;
             padding: 10px;
-            height: 65px;
+            height: 60px;
             box-sizing: border-box;
 
             h1 {
