@@ -1,4 +1,5 @@
 $menuHeight: 65px+10px;
+
 @mixin transition {
     transition-property: background-color opacity;
     transition-duration: 0.2s;
@@ -18,197 +19,252 @@ body {
     right: 0;
 }
 
-#mazeContainer {
-    transition-property: opacity;
-    transition-duration: 1s;
-    transition-timing-function: linear;
-    top: $menuHeight;
-    opacity: 0;
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.30);
-    margin: auto;
 
+.btn {
+    background-color: #23D5AB;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 470px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 100px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+    position: absolute;
+    top: 1450px;
+    left: 300px;
+    font-family: Days One;
+}
+
+.btn--gradient {
+    animation: gradient 3s ease infinite;
+    background-image: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 1000% 400%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+    #mazeContainer {
+        transition-property: opacity;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+        top: $menuHeight;
+        opacity: 0;
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.30);
+        margin: auto;
+
+    }
     #mazeCanvas {
         margin: 0;
         display: block;
         border: solid 1px black;
     }
-}
 
-input,
-select {
-    @include transition;
-    cursor: auto;
-    background-color: rgba(0, 0, 0, 0.30);
-    height: 150px;
-    width: 230px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    display: inline-block;
-    font-size: 55px;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: 1px 1px 7px #fff600;
-    appearance: none;
-    font-family: 'Cherry Bomb One';
-    position: relative;
-    right: 50px;
-    &:hover {
-        background-color: rgba(0, 0, 0, 0.70);
-    }
-    &:active {
-        background-color: black;
-    }
-    &:focus {
-        outline: none;
-    }
-}
-#startMazeBtn{
-    
-    position: relative;
-    left: 50px;
-}
-footer{
-    font-size: 50;
-    font-family: Damion;
-    position: relative;
-    top: 250px;
-    
-    left: 300px;
-    margin: -20px;
-    text-shadow: 1px 1px 20px red;
-    border: 1px solid #000dff;
-    width: 400px;
-    height: 60px;
-}
-
-
-
-
-.custom-select {
-    display: inline-block;
+    input,
     select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC');
-        background-repeat: no-repeat;
-        background-position: 125px center;
-       
-    }
-}
-#okBtn{
-    position: relative;
-    left: 1px;
-}
-h1{
-    position: relative;
-    font-size: 100px;
-    right: 200px;
-    bottom: 250px;
-
-
-
-}
-p{
-    font-size: 50px;
-    
-}
-
-#Message-Container {
-    visibility: hidden;
-    color: white;
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.30);
-    z-index: 1;
-    #message {
-        width: 300px;
-        height: 300px;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        margin-left: -150px;
-        margin-top: -150px;
-    }
-}
-
-#page {
-    font-family: "Segoe UI", Arial, sans-serif;
-    text-align: center;
-    height: auto;
-    width: auto;
-    margin: auto;
- 
-    
-    #menu {
-        margin: auto;
+        @include transition;
+        cursor: auto;
+        background-color: rgba(0, 0, 0, 0.30);
+        height: 150px;
+        width: 230px;
         padding: 10px;
-        height: 65px;
-        box-sizing: border-box;
-        h1 {
-            margin: 0;
-            margin-bottom: 10px;
-            font-weight: 600;
-            font-size: 3.2rem;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        display: inline-block;
+        font-size: 55px;
+        text-align: center;
+        text-decoration: none;
+        text-shadow: 1px 1px 7px #fff600;
+        appearance: none;
+        font-family: 'Cherry Bomb One';
+        position: relative;
+        right: 50px;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.70);
+        }
+
+        &:active {
+            background-color: black;
+        }
+
+        &:focus {
+            outline: none;
         }
     }
-    #view {
-        position: absolute;
-        top:300px;
-        bottom: 0;
+
+    #startMazeBtn {
+
+        position: relative;
+        left: 50px;
+    }
+
+    footer {
+        font-size: 50;
+        font-family: Damion;
+        position: relative;
+        top: 250px;
+
+        left: 300px;
+        margin: -20px;
+        text-shadow: 1px 1px 20px red;
+        border: 1px solid #000dff;
+        width: 400px;
+        height: 60px;
+    }
+
+
+
+
+    .custom-select {
+        display: inline-block;
+
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC');
+            background-repeat: no-repeat;
+            background-position: 125px center;
+
+        }
+    }
+
+    #okBtn {
+        position: relative;
+        left: 1px;
+    }
+
+    h1 {
+        position: relative;
+        font-size: 100px;
+        right: 200px;
+        bottom: 250px;
+
+
+
+    }
+
+    p {
+        font-size: 50px;
+
+    }
+
+    #Message-Container {
+        visibility: hidden;
+        color: white;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
         left: 0;
+        bottom: 0;
         right: 0;
-        width: 100%;
+        background-color: rgba(0, 0, 0, 0.30);
+        z-index: 1;
+
+        #message {
+            width: 300px;
+            height: 300px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-left: -150px;
+            margin-top: -150px;
+        }
+    }
+
+    #page {
+        font-family: "Segoe UI", Arial, sans-serif;
+        text-align: center;
         height: auto;
-           
+        width: auto;
+        margin: auto;
+
+
+        #menu {
+            margin: auto;
+            padding: 10px;
+            height: 65px;
+            box-sizing: border-box;
+
+            h1 {
+                margin: 0;
+                margin-bottom: 10px;
+                font-weight: 600;
+                font-size: 3.2rem;
+            }
+        }
+
+        #view {
+            position: absolute;
+            top: 300px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: auto;
+
+        }
     }
-}
 
-.border {
-    border: 1px black solid;
-    border-radius: 5px;
-}
-
-
-
-#gradient {
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    color: #fff;
-    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-    background-size: 400% 400%;
-    animation: Gradient 15s ease infinite;
-}
-
-@keyframes Gradient {
-    0% {
-        background-position: 0% 50%
+    .border {
+        border: 1px black solid;
+        border-radius: 5px;
     }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
-}
 
- /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 400px) {
-     input, select{
-         width: 120px;
-     }
- }
 
+
+    #gradient {
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        color: #fff;
+        background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+        background-size: 400% 400%;
+        animation: Gradient 15s ease infinite;
+    }
+
+    @keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 400px) {
+
+        input,
+        select {
+            width: 120px;
+        }
+    }
