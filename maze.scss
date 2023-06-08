@@ -8,8 +8,8 @@ $menuHeight: 65px+10px;
 
 html,
 body {
-    width: 100vw;
-    height: 100vh;
+    width: auto;
+    height: auto;
     position: fixed;
     padding: 0;
     margin: 0;
@@ -90,13 +90,14 @@ body {
         border-radius: 5px;
         color: white;
         display: inline-block;
+        
         font-size: 55px;
         text-align: center;
         text-decoration: none;
         text-shadow: 1px 1px 7px #fff600;
         appearance: none;
         font-family: 'Cherry Bomb One';
-        position: relative;
+        position: sticky;
         right: 50px;
         margin: 100px auto;
 
@@ -124,7 +125,7 @@ body {
         font-size: 50;
         font-family: Damion;
         position: relative;
-        top: 390px;
+        top: 350px;
 
         left: 300px;
         margin: -20px;
