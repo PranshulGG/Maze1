@@ -103,6 +103,8 @@ body {
 
         &:active {
             background-color: black;
+            position: relative;
+            top: 60px;
         }
 
         &:focus {
